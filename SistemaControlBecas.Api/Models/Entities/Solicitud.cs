@@ -1,4 +1,5 @@
 using SistemaControlBecas.Api.Models.Enums;
+using SistemaControlBecas.Api.Models.Enums;
 
 namespace SistemaControlBecas.Api.Models.Entities
 {
@@ -10,5 +11,8 @@ namespace SistemaControlBecas.Api.Models.Entities
         public DateTime FechaSolicitud { get; set; } = DateTime.Now;
         public EstadoSolicitud Estado { get; set; } = EstadoSolicitud.Pendiente;
         public string? Observaciones { get; set; }
+
+        // Propiedad de navegación: nos permite acceder al Estudiante relacionado
+        public Estudiante? Estudiante { get; set; }
     }
 }
